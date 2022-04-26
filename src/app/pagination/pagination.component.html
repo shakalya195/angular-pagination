@@ -1,0 +1,36 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a
+        (click)="changePage(1)"
+        class="page-link"
+        href="javascript://"
+        aria-label="Previous"
+      >
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li
+      *ngFor="let p of pages"
+      class="page-item"
+      [ngClass]="{ active: p == page }"
+    >
+      <a (click)="changePage(p)" class="page-link" href="javascript://">{{
+        p
+      }}</a>
+    </li>
+    <li class="page-item">
+      <a
+        (click)="changePage(numPages())"
+        class="page-link"
+        href="javascript://"
+        aria-label="Next"
+      >
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link"> {{ page }} of {{ numPages() }} pages </a>
+    </li>
+  </ul>
+</nav>

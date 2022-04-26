@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+
+<app-pagination
+  [totalItems]="502"
+  [itemsPerPage]="10"
+  (pageChange)="pageChange($event)"
+>
+</app-pagination>
+
+<pre>{{ event | json }}</pre>
